@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Inteligencia Artificial: definición, aplicaciones prácticas, ejemplos, riesgos y buenas prácticas. Material educativo I.E. SANTA FORTUNATA.">
+  <title>Inteligencia Artificial — I.E. SANTA FORTUNATA</title>
+
+  <!-- Tipografía y CSS principal (styles.css en la misma carpeta) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Ajustes específicos mínimos para esta página (evitan dependencias extras y mejoran el grid) -->
+  <style>
+    /* Estructura principal: grid para escritorio, stack para móviles */
+    main.page-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 18px;
+      align-items: start;
+    }
+    /* Fallback flex para navegadores muy viejos */
+    @supports not (display: grid) {
+      main.page-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+
+    /* Pequeño breakpoint local (único) para apilar columnas en pantallas estrechas */
+    @media (max-width: 840px) {
+      main.page-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Ajustes visuales específicos: tamaño del título y del botón principal */
+    header.page-header h1 { font-size: 1.15rem; margin: 0; }
+    .bigbtn.primary {
+      display:inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(2,6,23,0.45);
+    }
+    /* Asegurar que el placeholder ocupe área estable */
+    img.placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      background-color: #0b1220;
+      /* SVG text placeholder (si src está vacío) */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%2309141a'/%3E%3Ctext x='50%25' y='50%25' fill='%2399a9bf' font-family='Inter, Arial, sans-serif' font-size='20' text-anchor='middle' dy='.3em'%3EImagen%20placeholder%3C/text%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+    }
+
+    /* Mejor contraste para llamadas de atención */
+    .callout { border-left-width: 4px; border-left-style: solid; padding: 12px; border-radius: 8px; margin-top:10px; }
+    .callout.info { border-left-color: #60a5fa; background: rgba(96,165,250,0.03); color: #e8f6ff; }
+    .callout.warn { border-left-color: #fb7185; background: rgba(251,113,133,0.02); color: #fff1f2; }
+
+    /* Skip link visible on focus */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      left: 0;
+      margin: 8px 16px;
+      padding: 8px 12px;
+      background: #ffffff;
+      color: #042026;
+      border-radius: 8px;
+      text-decoration: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="wrap-article" style="padding:14px">
+    <header class="page-header" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="logo" aria-hidden="true">IA</div>
+        <div>
+          <h1>Inteligencia Artificial</h1>
+          <div class="small-muted">Definición, aplicaciones prácticas, ejemplos y consideraciones éticas.</div>
+        </div>
+      </div>
+
+      <nav aria-label="Acciones de la página" style="display:flex;gap:12px;align-items:center">
+        <a href="index.html" class="bigbtn primary" style="background:linear-gradient(90deg,#60a5fa,#34d399);color:#042026" aria-label="Volver al inicio">⬅ Volver al inicio</a>
+      </nav>
+    </header>
+
+    <main id="contenido-principal" class="page-grid" role="main" aria-labelledby="titulo-principal" style="margin-top:16px;">
+      <!-- Artículo principal -->
+      <article class="article-card" aria-describedby="resumen-ia">
+        <img class="placeholder" src="" alt="Imagen representativa de Inteligencia Artificial (placeholder)" />
+
+        <h2 id="titulo-principal" class="h2" style="margin-top:14px;">¿Qué es la Inteligencia Artificial?</h2>
+        <p id="resumen-ia" class="p-muted">La Inteligencia Artificial (IA) es el conjunto de técnicas que permite a sistemas informáticos procesar grandes cantidades de datos para identificar patrones, aprender y tomar decisiones o generar resultados (texto, imágenes, predicciones).</p>
+
+        <section aria-labelledby="aplicaciones">
+          <h3 id="aplicaciones" class="h2">Aplicaciones actuales — ejemplos concretos</h3>
+          <ul class="p-muted">
+            <li><strong>Asistentes de voz:</strong> Siri, Google Assistant y Alexa interpretan lenguaje natural para ejecutar acciones (agenda, alarmas, búsquedas).</li>
+            <li><strong>Recomendaciones personalizadas:</strong> Netflix/Soptify/Amazon usan modelos que analizan historiales para sugerir contenido o productos.</li>
+            <li><strong>Salud:</strong> IA que prioriza imágenes médicas sospechosas, ayuda en diagnóstico y optimiza agendas hospitalarias.</li>
+            <li><strong>Transporte:</strong> sistemas de asistencia al conductor y prototipos de vehículos autónomos (percepción, planificación).</li>
+            <li><strong>Creatividad asistida:</strong> generación de imágenes, audio y texto para diseño, marketing y prototipado.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="ejemplo-practico">
+          <h3 id="ejemplo-practico" class="h2">Ejemplo práctico</h3>
+          <div class="callout info">
+            Un hospital integra IA para prefiltrar radiografías: el algoritmo marca imágenes con probabilidad de anomalía > X% y las prioriza para revisión humana. Resultado: tiempos de respuesta más cortos y mejor reparto del trabajo del equipo médico.
+          </div>
+        </section>
+
+        <section aria-labelledby="riesgos">
+          <h3 id="riesgos" class="h2">Riesgos y consideraciones</h3>
+          <p class="p-muted">A pesar del valor, la IA puede introducir sesgos si los datos no son representativos, afectar la privacidad si se manejan datos sensibles y crear dependencia tecnológica. Por eso es crucial auditoría, explicabilidad (transparencia) y supervisión humana.</p>
+
+          <div class="callout warn" role="note">
+            Riesgo real: un sistema de selección automatizada que fue entrenado con datos históricos heredó sesgos y filtró candidaturas de forma injusta. La solución implicó revisar datos, ajustar criterios y añadir control humano en decisiones finales.
+          </div>
+        </section>
+
+        <section aria-labelledby="recomendaciones">
+          <h3 id="recomendaciones" class="h2">Buenas prácticas al usar IA (rápidas)</h3>
+          <ol class="p-muted">
+            <li>Auditar y documentar las fuentes de datos.</li>
+            <li>Validar modelos con datos reales y usuarios finales.</li>
+            <li>Implementar indicadores de confianza y límites de uso.</li>
+            <li>Garantizar privacidad: minimizar datos sensibles y cifrar lo necesario.</li>
+            <li>Mantener supervisión humana en decisiones críticas.</li>
+          </ol>
+        </section>
+      </article>
+
+      <!-- Sidebar con recursos y resumen -->
+      <aside class="aside article-card" aria-label="recursos y resumen">
+        <h3 style="margin-top:0">Lectura rápida</h3>
+        <p class="small-muted">IA = sistemas que aprenden de datos. Su fuerza radica en detectar patrones en grandes volúmenes, pero requiere ética y controles.</p>
+
+        <h4 style="margin-top:12px">Recursos útiles</h4>
+        <ul class="small-muted">
+          <li><a href="https://unsplash.com/s/photos/artificial-intelligence" target="_blank" rel="noopener" style="color:inherit">Imágenes (Unsplash)</a></li>
+          <li><a href="https://ai.google/education/" target="_blank" rel="noopener" style="color:inherit">Guía básica (Google AI)</a></li>
+        </ul>
+
+        <h4 style="margin-top:12px">Mini-glosario</h4>
+        <dl class="small-muted">
+          <dt><strong>Modelo</strong></dt><dd>Algoritmo entrenado para producir predicciones.</dd>
+          <dt><strong>Sesgo</strong></dt><dd>Distorsión en resultados por datos o diseño imperfecto.</dd>
+        </dl>
+
+        <div style="margin-top:14px;">
+          <a href="index.html" class="bigbtn primary" style="background:linear-gradient(90deg,#60a5fa,#34d399);color:#042026;display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:12px 0">I.E. SANTA FORTUNATA</footer>
+  </div>
+</body>
+</html>

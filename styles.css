@@ -1,0 +1,111 @@
+:root{
+  --bg: #071026;              /* fondo base estable */
+  --bg-soft: #0b1530;         /* tono cercano para sutil variación */
+  --card-stroke: rgba(255,255,255,0.04);
+  --muted: #98a0b3;
+  --text: #e6eef8;
+  --good-1: #34d399;
+  --good-2: #60a5fa;
+  --bad-1: #fb7185;
+  --radius: 12px;
+  --gap: 16px;
+  --transition: 200ms;
+}
+
+/* RESET */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  /* Fondo simple y estable (evita cortes muy visibles). 
+     Si quieres gradiente muy suave, usa valores MUY parecidos */
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 100%);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Contenedor central: le damos un fondo consistente para evitar ver el fondo del body entre elementos */
+.wrap{
+  max-width:1200px;
+  margin:18px auto;
+  padding:16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid var(--card-stroke);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
+
+/* HEADER (sin cambios radicales) */
+header{
+  padding:10px 12px;
+  border-radius: calc(var(--radius) - 2px);
+  background: transparent; /* transparente para no competir con .wrap */
+}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--good-1),var(--good-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#042026;flex:0 0 auto}
+.header-title h1{margin:0;font-size:18px}
+.header-title p{margin:0;color:var(--muted);font-size:13px}
+
+/* LAYOUT PRINCIPAL */
+main{margin-top:16px}
+.grid-two{display:grid;grid-template-columns:1fr;gap:18px}
+.panel{padding:14px;border-radius:10px;border:1px solid var(--card-stroke);background: rgba(255,255,255,0.01)}
+.panel h2{margin:0 0 8px 0;font-size:18px}
+.panel p{margin:0 0 12px 0;color:var(--muted);font-size:14px}
+
+/* TARJETAS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;align-items:start}
+.card{display:flex;flex-direction:column;gap:10px;background: rgba(255,255,255,0.015);padding:12px;border-radius:8px;border:1px solid var(--card-stroke);text-decoration:none;color:inherit;min-height:180px;transition:transform var(--transition) ease,box-shadow var(--transition) ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,0.45)}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;background:#0b1220}
+
+/* placeholders: si src="" o clase .placeholder, se ve limpio */
+img.placeholder{background-color:#0b1220; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%2309141a'/%3E%3Ctext x='50%25' y='50%25' fill='%2399a9bf' font-family='Inter, Arial' font-size='20' text-anchor='middle' dy='.3em'%3EImagen%20placeholder%3C/text%3E%3C/svg%3E"); background-repeat:no-repeat;background-position:center;background-size:55%}
+
+/* BOTONES y CTA */
+.cta{display:inline-block;padding:12px 14px;border-radius:8px;font-weight:700;text-align:center;text-decoration:none}
+.good .cta{background:linear-gradient(90deg,var(--good-1),var(--good-2));color:#042026}
+.bad .cta{background:linear-gradient(90deg,var(--bad-1),#f97316);color:#2a0505}
+
+/* ARTICLE / SIDEBAR */
+.wrap-article{max-width:980px;margin:12px auto;padding:12px;background:transparent}
+.article-card{padding:14px;border-radius:8px;border:1px solid var(--card-stroke);background: rgba(255,255,255,0.01)}
+.h2{font-size:18px;margin:10px 0}
+.p-muted{color:var(--muted)}
+.bigbtn{display:inline-block;padding:12px 16px;border-radius:12px;background:linear-gradient(90deg,var(--good-2),var(--good-1));color:#042026;font-weight:700;text-decoration:none;margin-top:12px}
+
+/* FOOTER: ahora tiene fondo igual que la parte inferior del wrap y ocupa ancho interno del wrap 
+   Si quieres footer full-width, déjalo fuera de .wrap o pon footer { width:100vw; position:relative; left:50%; transform:translateX(-50%); } */
+footer{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+  padding:12px 16px;
+  background: rgba(255,255,255,0.01);   /* coincide visualmente con .wrap para no crear 'corte' */
+  border-radius: 0 0 calc(var(--radius) + 2px) calc(var(--radius) + 2px);
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* RESPONSIVE (solo 1 breakpoint simple) */
+@media(min-width:860px){
+  .grid-two{grid-template-columns:1fr 1fr}
+  .logo{width:64px;height:64px}
+}
+@media(max-width:640px){
+  .wrap{padding:12px;margin:12px}
+  .card img{aspect-ratio:4/3}
+  .card{min-height:150px}
+}
+@media(max-width:420px){
+  .header-top{flex-direction:column;align-items:flex-start;gap:10px}
+  .cards{grid-template-columns:1fr}
+}
+
+/* UTILIDADES */
+.clear{clear:both}
+.small-muted{color:var(--muted);font-size:13px}
+
+/* FIN */

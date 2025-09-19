@@ -1,91 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LO BUENO Y LO MALO DE LA TECNOLOGÍA</title>
+  <meta name="description" content="Ventajas y riesgos de la tecnología: inteligencia artificial, robótica, ciberseguridad y más." />
+  <title>Lo Bueno y lo Malo de la Tecnología</title>
+
+  <!-- Fuente Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style_index.css">
 </head>
 <body>
-  <div class="wrap fade-in">
+  <div class="wrap" role="main">
     <header>
-      <div class="header-top">
-        <div class="brand">
-          <div class="logo">😇/😈</div>
-          <div class="header-title">
-            <h1>LO BUENO Y LO MALO DE LA TECNOLOGÍA</h1>
-            <p class="small-muted">Explora ventajas, riesgos y ejemplos reales.</p>
-          </div>
-        </div>
-        <nav aria-label="navegación principal">
-          <a href="#buenos" class="small-muted" style="text-decoration:none;">Ir a secciones ↓</a>
-        </nav>
+      <div class="header-title">
+        <h1 class="inter-700">Lo Bueno y lo Malo de la Tecnología</h1>
+        <p class="small-muted inter-400">Explora ventajas, riesgos y ejemplos.</p>
       </div>
     </header>
 
     <main>
-      <div class="grid-two">
-        <section id="buenos" class="panel good fade-in">
-          <h2>Lo Bueno de la Tecnología</h2>
-          <p>La tecnología potencia soluciones creativas y mejora procesos en educación, salud, industria y comunicaciones. Descubre algunas áreas destacadas:</p>
+      <div class="split">
+        <!-- SECCIÓN: LO BUENO -->
+        <section id="buenos" class="pane good">
+          <h2 class="panel-title inter-700">Lo Bueno</h2>
+          <p class="panel-desc inter-400">La tecnología potencia soluciones creativas y mejora procesos en educación, salud, industria y comunicaciones.</p>
 
-          <div class="cards" aria-label="Tarjetas de beneficios">
-            <a class="card" href="ia.html" aria-labelledby="ia-title">
-              <img class="placeholder" src="" alt="Imagen ilustrativa de inteligencia artificial">
-              <div id="ia-title" class="title">Inteligencia Artificial</div>
-              <div class="desc">Asistentes, automatización, modelos generativos y recomendadores.</div>
-              <span class="cta">Leer sobre IA →</span>
-            </a>
+          <div class="cards">
+            <article class="card">
+              <img src="" alt="Inteligencia Artificial">
+              <h3 class="title inter-600">Inteligencia Artificial</h3>
+              <p class="desc inter-400">Asistentes, automatización y modelos generativos que aumentan la productividad.</p>
+              <a href="ia.html" class="cta inter-600">Leer más →</a>
+            </article>
 
-            <a class="card" href="robotica.html" aria-labelledby="r-title">
-              <img class="placeholder" src="" alt="Robots industriales">
-              <div id="r-title" class="title">Robótica</div>
-              <div class="desc">Robots industriales, médicos y domésticos que aumentan eficiencia.</div>
-              <span class="cta">Leer sobre Robótica →</span>
-            </a>
+            <article class="card">
+              <img src="" alt="Robótica">
+              <h3 class="title inter-600">Robótica</h3>
+              <p class="desc inter-400">Robots que ayudan en manufactura, cirugía y tareas peligrosas.</p>
+              <a href="robotica.html" class="cta inter-600">Leer más →</a>
+            </article>
 
-            <a class="card" href="cibernetica.html" aria-labelledby="c-title">
-              <img class="placeholder" src="" alt="Control y sistemas">
-              <div id="c-title" class="title">Cibernética</div>
-              <div class="desc">Estudio de sistemas de control y retroalimentación.</div>
-              <span class="cta">Leer sobre Cibernética →</span>
-            </a>
+            <article class="card">
+              <img src="" alt="Cibernética">
+              <h3 class="title inter-600">Cibernética</h3>
+              <p class="desc inter-400">Control y retroalimentación para sistemas resilientes y eficientes.</p>
+              <a href="cibernetica.html" class="cta inter-600">Leer más →</a>
+            </article>
           </div>
         </section>
 
-        <section id="malos" class="panel bad fade-in">
-          <h2>Lo Malo de la Tecnología</h2>
-          <p>Con gran poder vienen riesgos: desde el abuso digital a problemas de privacidad y seguridad. Aprende a identificarlos y prevenirlos.</p>
+        <!-- SECCIÓN: LO MALO -->
+        <section id="malos" class="pane bad">
+          <h2 class="panel-title inter-700">Lo Malo</h2>
+          <p class="panel-desc inter-400">Riesgos como abuso digital, pérdida de privacidad, desinformación y vulnerabilidades técnicas.</p>
 
-          <div class="cards" aria-label="Tarjetas de riesgos">
-            <a class="card" href="ciberacoso.html" aria-labelledby="ca-title">
-              <img class="placeholder" src="" alt="Persona preocupada frente a pantalla">
-              <div id="ca-title" class="title">Ciberacoso</div>
-              <div class="desc">Hostigamiento y amenazas en entornos digitales.</div>
-              <span class="cta">Leer sobre Ciberacoso →</span>
-            </a>
+          <div class="cards">
+            <article class="card">
+              <img src="" alt="Ciberacoso">
+              <h3 class="title inter-600">Ciberacoso</h3>
+              <p class="desc inter-400">Hostigamiento y amenazas que dañan el bienestar emocional.</p>
+              <a href="ciberacoso.html" class="cta inter-600">Leer más →</a>
+            </article>
 
-            <a class="card" href="ciberbullying.html" aria-labelledby="cb-title">
-              <img class="placeholder" src="" alt="Joven afectado por bullying">
-              <div id="cb-title" class="title">Ciberbullying</div>
-              <div class="desc">Bullying digital entre pares con impacto psicológico.</div>
-              <span class="cta">Leer sobre Ciberbullying →</span>
-            </a>
+            <article class="card">
+              <img src="" alt="Ciberbullying">
+              <h3 class="title inter-600">Ciberbullying</h3>
+              <p class="desc inter-400">Acoso entre pares con consecuencias psicológicas graves.</p>
+              <a href="ciberbullying.html" class="cta inter-600">Leer más →</a>
+            </article>
 
-            <a class="card" href="ciberseguridad.html" aria-labelledby="cs-title">
-              <img class="placeholder" src="" alt="Seguridad en datos">
-              <div id="cs-title" class="title">Seguridad de Datos</div>
-              <div class="desc">Medidas y buenas prácticas para proteger información sensible.</div>
-              <span class="cta">Leer sobre Seguridad →</span>
-            </a>
+            <article class="card">
+              <img src="" alt="Seguridad de Datos">
+              <h3 class="title inter-600">Seguridad de Datos</h3>
+              <p class="desc inter-400">Fallas o malas prácticas que exponen información sensible.</p>
+              <a href="ciberseguridad.html" class="cta inter-600">Leer más →</a>
+            </article>
           </div>
         </section>
       </div>
     </main>
 
     <footer>
-      I.E. SANTA FORTUNATA
+      <p class="small-muted inter-400">I.E. Santa Fortunata</p>
     </footer>
   </div>
 </body>

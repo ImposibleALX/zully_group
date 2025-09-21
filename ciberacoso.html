@@ -1,55 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ciberacoso — I.E. SANTA FORTUNATA</title>
+  <meta name="description" content="Qué es el ciberacoso, cómo identificarlo y pasos prácticos para actuar y protegerse.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap-article" style="padding:14px">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo">⚠</div>
-        <div>
-          <h1 style="margin:0;font-size:18px">Ciberacoso</h1>
-          <div class="small-muted">Formas, consecuencias y cómo actuar.</div>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="wrap" role="document">
+    <header class="site-header" role="banner" aria-label="Encabezado">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">⚠</div>
+        <div class="header-title">
+          <h1 class="site-name">Ciberacoso</h1>
+          <p class="small-muted">Formas, consecuencias y cómo actuar de forma segura.</p>
         </div>
       </div>
-      <nav>
-        <a href="index.html" class="bigbtn" style="background:linear-gradient(90deg,#fb7185,#ff7a50);color:#351314">Volver al inicio</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Acciones">
+        <ul class="nav-list">
+          <li><a class="bigbtn" href="index.html" aria-label="Volver al inicio">⬅ Volver al inicio</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main style="display:grid;grid-template-columns:1fr 300px;gap:18px;margin-top:16px;align-items:start">
-      <article class="article-card">
-        <img class="placeholder" src="" alt="Imagen representativa Ciberacoso">
-        <h2 class="h2">¿Qué es el ciberacoso?</h2>
-        <p class="p-muted">Es el uso de medios digitales para acosar, humillar o amenazar a alguien: mensajes, publicaciones, difundir rumores o imágenes sin consentimiento.</p>
+    <main id="contenido-principal" class="layout" role="main" aria-labelledby="titulo-principal">
+      <article class="article-card" aria-describedby="resumen-ciberacoso">
+        <figure class="hero">
+          <img class="placeholder" src="assets/acoso_1.jfif" alt="Ilustración relacionada con seguridad online" loading="lazy" width="1200" height="675">
+        </figure>
+
+        <h2 id="titulo-principal" class="h2">¿Qué es el ciberacoso?</h2>
+        <p id="resumen-ciberacoso" class="p-muted">
+          El ciberacoso usa herramientas digitales (mensajes, redes, chats) para intimidar, humillar o amenazar. Puede pasar en cualquier red y afecta la salud emocional y la vida diaria de la persona afectada.
+        </p>
 
         <h3 class="h2">Formas habituales</h3>
         <ul class="p-muted">
-          <li>Mensajes agresivos o repetidos.</li>
-          <li>Publicación de información privada sin permiso.</li>
-          <li>Suplantación de identidad y perfiles falsos.</li>
+          <li>Mensajes repetidos, agresivos o con intimidación.</li>
+          <li>Publicación de datos o imágenes sin consentimiento.</li>
+          <li>Suplantación de identidad (perfiles falsos).</li>
           <li>Difusión de rumores o contenido difamatorio.</li>
         </ul>
 
-        <h3 class="h2">Qué hacer si eres víctima</h3>
-        <div class="callout warn">1) Guarda evidencia (capturas, URLs, fechas). 2) Bloquea y reporta en la plataforma. 3) Informa a autoridades o responsables. 4) Busca apoyo emocional.</div>
+        <h3 class="h2">Qué hacer si te ocurre</h3>
+        <div class="callout info" role="status">
+          <ol style="margin:0;padding-left:18px;">
+            <li><strong>Guarda evidencia:</strong> captura pantallas, guarda URLs, fechas y nombres de usuario.</li>
+            <li><strong>No interactúes:</strong> bloquear y no responder reduce la escalada.</li>
+            <li><strong>Reporta en la plataforma:</strong> la mayoría permite denunciar cuentas o publicaciones.</li>
+            <li><strong>Busca apoyo:</strong> cuenta a un adulto de confianza, tutor o al equipo de la escuela.</li>
+            <li><strong>Si hay amenaza real:</strong> informa a las autoridades locales o al responsable de seguridad de tu institución.</li>
+          </ol>
+        </div>
 
         <h3 class="h2">Ejemplo real</h3>
-        <div class="callout" style="margin-top:10px">Un trabajador recibe mensajes intimidatorios en un chat de la empresa: eso puede demandar acción de RR.HH. y, si hay delito, denuncia formal.</div>
+        <div class="callout" role="article" aria-label="Ejemplo de ciberacoso">
+          Un empleado recibe mensajes intimidatorios en el chat de trabajo. Guardó capturas, bloqueó al remitente y lo reportó a RR.HH.; con la evidencia se aplicaron medidas internas y se ofreció apoyo al afectado.
+        </div>
       </article>
 
-      <aside class="aside article-card">
+      <aside class="aside-card" aria-label="recursos y apoyo">
         <h3 style="margin-top:0">Recursos y apoyo</h3>
-        <p class="small-muted">Contacta a líneas de ayuda locales y conserva pruebas antes de eliminar contenido.</p>
+        <p class="small-muted">Conserva siempre pruebas antes de eliminar contenido. Busca ayuda de confianza y no te quedes solo/a.</p>
+
+        <h4 style="margin-top:12px">Enlaces útiles</h4>
+        <ul class="small-muted">
+          <li><a class="external" href="https://www.unicef.org/es" target="_blank" rel="noopener">Consejos y recursos (UNICEF)</a></li>
+          <li><a class="external" href="https://www.consumer.ftc.gov" target="_blank" rel="noopener">Guías de protección digital</a></li>
+        </ul>
+
+        <h4 style="margin-top:12px">Si estás en peligro</h4>
+        <p class="small-muted">Si recibes amenazas directas o sientes riesgo inmediato, contacta a las autoridades locales y conserva toda la evidencia.</p>
+
+        <div style="margin-top:14px">
+          <a href="index.html" class="bigbtn" style="display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
       </aside>
     </main>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:10px 0">I.E. SANTA FORTUNATA</footer>
+    <footer class="site-footer" role="contentinfo">I.E. SANTA FORTUNATA</footer>
   </div>
 </body>
 </html>

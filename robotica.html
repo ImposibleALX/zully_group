@@ -1,58 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Robótica — I.E. SANTA FORTUNATA</title>
+  <meta name="description" content="Robótica: definición, sectores, ejemplos y recursos para estudiantes. Material educativo I.E. SANTA FORTUNATA.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap-article" style="padding:14px">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo">R</div>
-        <div>
-          <h1 style="margin:0;font-size:18px">Robótica</h1>
-          <div class="small-muted">Máquinas que interactúan con el mundo físico.</div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="wrap" role="document">
+    <header class="site-header" role="banner" aria-label="Encabezado de la página">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">R</div>
+        <div class="header-title">
+          <h1 class="site-name">Robótica</h1>
+          <p class="small-muted">Máquinas que interactúan con el mundo físico.</p>
         </div>
       </div>
-      <nav>
-        <a href="index.html" class="bigbtn">Volver al inicio</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a class="bigbtn" href="index.html" aria-label="Volver al inicio">⬅ Volver al inicio</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:16px;align-items:start">
-      <article class="article-card">
-        <img class="placeholder" src="" alt="Imagen representativa Robótica">
-        <h2 class="h2">¿Qué es la Robótica?</h2>
-        <p class="p-muted">La robótica integra mecánica, electrónica y software para construir máquinas que perciben y actúan en su entorno. Hay robots industriales, médicos, de servicio y de exploración.</p>
+    <main id="main" class="layout" role="main" aria-labelledby="titulo-principal">
+      <!-- Artículo principal -->
+      <article class="article-card" aria-describedby="resumen-robotica">
+        <figure class="hero">
+          <img
+            class="placeholder"
+            src="assets/robotica_1.jfif"
+            alt="Robot industrial manipulando piezas"
+            loading="lazy"
+            width="1200"
+            height="675">
+        </figure>
+
+        <h2 id="titulo-principal" class="h2">¿Qué es la Robótica?</h2>
+        <p id="resumen-robotica" class="p-muted">
+          La robótica combina mecánica, electrónica y programación para diseñar máquinas que perciben y actúan en su entorno. Va desde brazos industriales precisos hasta robots de servicio y exploración.
+        </p>
 
         <h3 class="h2">Sectores y ejemplos</h3>
         <ul class="p-muted">
-          <li><strong>Industria:</strong> brazos robóticos que ensamblan piezas con precisión y velocidad.</li>
-          <li><strong>Medicina:</strong> sistemas para cirugía mínimamente invasiva y exoesqueletos.</li>
-          <li><strong>Hogar:</strong> robots aspiradores y asistentes que automatizan tareas cotidianas.</li>
-          <li><strong>Exploración:</strong> drones y vehículos que operan en ambientes peligrosos.</li>
+          <li><strong>Industria:</strong> brazos y células robotizadas para ensamblaje y soldadura.</li>
+          <li><strong>Medicina:</strong> brazos quirúrgicos, asistentes y exoesqueletos.</li>
+          <li><strong>Hogar:</strong> robots aspiradores, cortacésped y asistentes domésticos.</li>
+          <li><strong>Exploración:</strong> rovers, drones y robots subacuáticos para entornos peligrosos.</li>
         </ul>
 
         <h3 class="h2">Ejemplo práctico</h3>
-        <div class="callout">En un almacén, robots móviles trasladan palets entre estaciones; los humanos se concentran en tareas de control y decisiones complejas.</div>
+        <div class="callout" role="article" aria-label="Ejemplo robots de almacén">
+          En un almacén automatizado, robots móviles trasladan palets entre estaciones de trabajo; los operadores se encargan de supervisión, mantenimiento y optimización del flujo de trabajo.
+        </div>
 
-        <h3 class="h2">Retos</h3>
-        <p class="p-muted">Seguridad física, costes de implementación y necesidad de formación especializada son desafíos a considerar.</p>
+        <h3 class="h2">Retos y consideraciones</h3>
+        <p class="p-muted">
+          Entre los retos están la seguridad física (colaboración humano-robot), la inversión inicial, la capacitación del personal y la ética (privacidad y desplazamiento laboral). Planificar la integración y formar al equipo es clave.
+        </p>
+
+        <h3 class="h2">Cómo empezar (breve guía para estudiantes)</h3>
+        <ol class="p-muted">
+          <li>Aprende fundamentos: electrónica básica y programación (Python/C++).</li>
+          <li>Experimenta con microcontroladores: Arduino o micro:bit para controlar sensores y servos.</li>
+          <li>Practica simulación y control: usa simuladores (por ejemplo Gazebo, Webots) antes de hardware.</li>
+          <li>Participa en proyectos y ferias: el trabajo en equipo acelera el aprendizaje.</li>
+        </ol>
       </article>
 
-      <aside class="aside article-card">
-        <h3 style="margin-top:0">Proyecto sugerido</h3>
-        <p class="small-muted">Un brazo con servomotores controlado por Arduino es un excelente primer proyecto para entender sensores y actuadores.</p>
+      <!-- Sidebar con recursos y resumen -->
+      <aside class="aside-card" aria-label="recursos y resumen">
+        <h3 style="margin-top:0">Lectura rápida</h3>
+        <p class="small-muted">Robótica = sensores + controladores + actuadores. Diseña sistemas que perciben, deciden y actúan.</p>
 
-        <h4 style="margin-top:12px">Recurso</h4>
-        <p class="small-muted">Busca tutoriales básicos de electrónica y control por PWM para empezar.</p>
+        <h4 style="margin-top:12px">Recursos útiles</h4>
+        <ul class="small-muted">
+          <li><a class="external" href="https://www.arduino.cc/" target="_blank" rel="noopener">Arduino — documentación y proyectos</a></li>
+          <li><a class="external" href="https://www.robotics.org/" target="_blank" rel="noopener">The Robotics Industry Association</a></li>
+          <li><a class="external" href="https://ocw.mit.edu/courses/find-by-topic/#cat=engineering&subcat=robotics" target="_blank" rel="noopener">Cursos (MIT OCW) — robótica</a></li>
+        </ul>
+
+        <h4 style="margin-top:12px">Mini-glosario</h4>
+        <dl class="small-muted">
+          <dt><strong>Sensor</strong></dt><dd>Dispositivo que mide variables (distancia, temperatura, posición).</dd>
+          <dt><strong>Actuador</strong></dt><dd>Mecanismo que ejecuta acciones (motores, servos, válvulas).</dd>
+          <dt><strong>Control</strong></dt><dd>Lógica o algoritmo que decide la acción en función de la entrada.</dd>
+        </dl>
+
+        <div style="margin-top:14px;">
+          <a href="index.html" class="bigbtn" style="display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
       </aside>
     </main>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:10px 0">I.E. SANTA FORTUNATA</footer>
+    <footer class="site-footer" role="contentinfo">I.E. SANTA FORTUNATA</footer>
   </div>
 </body>
 </html>

@@ -1,52 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cibernética — I.E. SANTA FORTUNATA</title>
+  <meta name="description" content="Cibernética: control, retroalimentación y comunicación en sistemas. Explicación clara y ejemplos prácticos para estudiantes.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap-article" style="padding:14px">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo">C</div>
-        <div>
-          <h1 style="margin:0;font-size:18px">Cibernética</h1>
-          <div class="small-muted">Control, retroalimentación y comunicación en sistemas.</div>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="wrap" role="document">
+    <header class="site-header" role="banner" aria-label="Encabezado de la página">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">C</div>
+        <div class="header-title">
+          <h1 class="site-name">Cibernética</h1>
+          <p class="small-muted">Control, retroalimentación y comunicación en sistemas — explicado con ejemplos prácticos.</p>
         </div>
       </div>
-      <nav>
-        <a href="index.html" class="bigbtn">Volver al inicio</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a class="bigbtn" href="index.html" aria-label="Volver al inicio">⬅ Volver al inicio</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main style="display:grid;grid-template-columns:1fr 300px;gap:18px;margin-top:16px;align-items:start">
-      <article class="article-card">
-        <img class="placeholder" src="" alt="Imagen representativa Cibernética">
-        <h2 class="h2">¿Qué es la cibernética?</h2>
-        <p class="p-muted">La cibernética estudia cómo los sistemas se regulan y comunican: sensores, controladores y actuadores trabajan en bucles de retroalimentación para mantener objetivos o adaptarse.</p>
+    <main id="contenido-principal" class="layout" role="main" aria-labelledby="titulo-principal">
+      <article class="article-card" aria-describedby="resumen-cibernetica">
+        <figure class="hero">
+          <img class="placeholder" src="assets/cibernetica_1.jfif" alt="Diagrama simple de control y retroalimentación" loading="lazy" width="1200" height="675">
+        </figure>
+
+        <h2 id="titulo-principal" class="h2">¿Qué es la cibernética?</h2>
+        <p id="resumen-cibernetica" class="p-muted">
+          La cibernética estudia cómo los sistemas (máquinas, organismos u organizaciones) se regulan y comunican. Piensa en sensores que miden, controladores que deciden y actuadores que actúan: juntos forman bucles que mantienen o corrigen el comportamiento del sistema.
+        </p>
 
         <h3 class="h2">Conceptos clave</h3>
         <ul class="p-muted">
-          <li><strong>Sensor:</strong> mide el estado del sistema (p. ej. temperatura).</li>
-          <li><strong>Controlador:</strong> compara objetivo y estado y decide acción.</li>
-          <li><strong>Actuador:</strong> ejecuta la corrección (p. ej. encender ventilador).</li>
+          <li><strong>Sensor:</strong> recoge información del entorno o del propio sistema (p. ej. temperatura).</li>
+          <li><strong>Controlador:</strong> compara la medida con el objetivo y decide qué hacer.</li>
+          <li><strong>Actuador:</strong> ejecuta la acción correctiva (p. ej. encender un ventilador).</li>
+          <li><strong>Retroalimentación:</strong> el resultado vuelve al sensor y cierra el bucle, permitiendo ajustes continuos.</li>
         </ul>
 
         <h3 class="h2">Ejemplos prácticos</h3>
-        <div class="callout">Un termostato que activa la calefacción cuando la temperatura cae por debajo de un umbral es un ejemplo simple de control por retroalimentación.</div>
-        <div class="callout alt" style="margin-top:10px">En aviación, el piloto automático usa datos del entorno para ajustar controles y mantener rumbo y altitud.</div>
+        <div class="callout" role="article" aria-label="Ejemplo termostato">
+          Un termostato que enciende la calefacción cuando la temperatura baja del umbral es un control simple por retroalimentación: mide (sensor), decide (controlador) y actúa (actuador).
+        </div>
+
+        <div class="callout" style="margin-top:10px" role="article" aria-label="Ejemplo piloto automático">
+          En aviación, el piloto automático recibe datos (velocidad, altitud), calcula correcciones y mueve superficies de control para mantener rumbo y altitud: ejemplo de cibernética en sistemas complejos.
+        </div>
       </article>
 
-      <aside class="aside article-card">
+      <aside class="aside-card" aria-label="resumen y recursos">
         <h3 style="margin-top:0">Resumen rápido</h3>
-        <p class="small-muted">Cibernética = principios de control aplicados a máquinas, organismos y organizaciones.</p>
+        <p class="small-muted">Cibernética = reglas y herramientas para que un sistema se mantenga estable o se adapte. Es fundamental en robótica, control industrial y bioingeniería.</p>
+
+        <h4 style="margin-top:12px">Recursos recomendados</h4>
+        <ul class="small-muted">
+          <li><a class="external" href="https://es.wikipedia.org/wiki/Cibern%C3%A9tica" target="_blank" rel="noopener">Introducción (Wikipedia)</a></li>
+          <li><a class="external" href="https://ocw.mit.edu" target="_blank" rel="noopener">Cursos (MIT OpenCourseWare)</a></li>
+        </ul>
+
+        <h4 style="margin-top:12px">Mini-glosario</h4>
+        <dl class="small-muted">
+          <dt><strong>Bucle de control</strong></dt><dd>Secuencia sensor → controlador → actuador → sensor.</dd>
+          <dt><strong>Estabilidad</strong></dt><dd>Capacidad de un sistema para volver a su estado deseado tras una perturbación.</dd>
+        </dl>
+
+        <div style="margin-top:14px;">
+          <a href="index.html" class="bigbtn" style="display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
       </aside>
     </main>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:10px 0">I.E. SANTA FORTUNATA</footer>
+    <footer class="site-footer" role="contentinfo">I.E. SANTA FORTUNATA</footer>
   </div>
 </body>
 </html>

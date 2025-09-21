@@ -1,4 +1,4 @@
-/* style_index.css — portada (grid + verde/rojo sencillo) */
+/* style_index.css — portada (grid + estilo frío suave) */
 
 /* ---- FUENTE ---- */
 .inter-400 { font-family: "Inter", sans-serif; font-weight: 400; }
@@ -9,7 +9,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: "Inter", sans-serif;
-  background: #0a0f18;   /* azul oscuro general */
+  background: linear-gradient(135deg, #a7bfe8, #d5dee7); /* azul-lila pastel */
   color: #fff;
   line-height: 1.6;
   font-size: 18px;
@@ -27,44 +27,50 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 8px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .brand { display: flex; align-items: center; gap: 12px; }
 .logo {
   width: 48px; height: 48px;
   display: flex; justify-content: center; align-items: center;
-  background: linear-gradient(135deg, #3cc27e, #d9534f);
-  border-radius: 8px;
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
+  border-radius: 12px;
   font-weight: 700;
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
 }
 .header-title h1 { font-size: 22px; }
-.small-muted { font-size: 15px; opacity: 0.8; }
+.small-muted { font-size: 15px; opacity: 0.85; }
 
 /* ---- LAYOUT GRID ---- */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
 }
 
 .pane {
-  padding: 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
+  border-radius: 14px;
 }
 
+/* ---- BUENO Y MALO ---- */
 .good {
-  background: #3cc27e;   /* verde suave */
-  color: #041217;
+  background: linear-gradient(135deg, #cddaf1, #e3ebf7); /* azul-lila claro */
+  color: #1d2635;
 }
 .bad {
-  background: #d9534f;   /* rojo suave */
-  color: #041217;
+  background: linear-gradient(135deg, #99aabf, #7c8ca5); /* gris-azul tenue */
+  color: #fff;
 }
 
 /* ---- TITULOS Y TEXTO ---- */
@@ -74,43 +80,46 @@ header {
 /* ---- TARJETAS ---- */
 .cards {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .card {
   background: #fff;
-  color: #041217;
-  padding: 14px;
-  border-radius: 8px;
+  color: #2a3240;
+  padding: 16px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
-  transition: transform 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card:hover { transform: translateY(-3px); }
+.card:hover { 
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
 
 .card .title { font-size: 16px; font-weight: 600; }
-.card .desc { font-size: 14px; opacity: 0.7; }
+.card .desc { font-size: 14px; opacity: 0.75; }
 .cta {
   margin-top: auto;
   font-weight: 600;
   font-size: 14px;
   color: #fff;
-  padding: 8px 10px;
-  border-radius: 6px;
+  padding: 9px 12px;
+  border-radius: 8px;
   text-decoration: none;
   text-align: center;
 }
-.good .cta { background: #2f9b64; }
-.bad .cta { background: #b63f3b; }
+.good .cta { background: #6a85b6; } /* azul medio elegante */
+.bad .cta { background: #4b5a73; }  /* gris-azul oscuro para contraste */
 
 /* ---- FOOTER ---- */
 footer {
-  margin-top: 20px;
+  margin-top: 28px;
   text-align: center;
   font-size: 15px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /* ---- RESPONSIVE ---- */
@@ -118,4 +127,32 @@ footer {
   .split {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---- BOTONES CTA VERDE / ROJO ---- */
+:root {
+  --btn-good: #3ea76a;       /* verde suave */
+  --btn-good-hover: #318e56; /* hover más oscuro */
+  --btn-bad:  #c04848;       /* rojo apagado */
+  --btn-bad-hover: #993b3b;  /* hover más oscuro */
+}
+
+.good .cta {
+  background: var(--btn-good);
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.good .cta:hover {
+  background: var(--btn-good-hover);
+  transform: translateY(-2px);
+}
+
+.bad .cta {
+  background: var(--btn-bad);
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.bad .cta:hover {
+  background: var(--btn-bad-hover);
+  transform: translateY(-2px);
 }

@@ -1,54 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ciberbullying — I.E. SANTA FORTUNATA</title>
+  <meta name="description" content="Ciberbullying: qué es, efectos en jóvenes y formas de prevención y apoyo.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap-article" style="padding:14px">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo">👥</div>
-        <div>
-          <h1 style="margin:0;font-size:18px">Ciberbullying</h1>
-          <div class="small-muted">Acoso digital entre pares y su impacto.</div>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="wrap" role="document">
+    <header class="site-header" role="banner" aria-label="Encabezado">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">👥</div>
+        <div class="header-title">
+          <h1 class="site-name">Ciberbullying</h1>
+          <p class="small-muted">Acoso persistente entre pares: impacto y cómo prevenirlo.</p>
         </div>
       </div>
-      <nav>
-        <a href="index.html" class="bigbtn" style="background:linear-gradient(90deg,#fb7185,#ff7a50);color:#351314">Volver al inicio</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Acciones">
+        <ul class="nav-list">
+          <li><a class="bigbtn" href="index.html" aria-label="Volver al inicio">⬅ Volver al inicio</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main style="display:grid;grid-template-columns:1fr 300px;gap:18px;margin-top:16px;align-items:start">
-      <article class="article-card">
-        <img class="placeholder" src="" alt="Imagen representativa Ciberbullying">
-        <h2 class="h2">¿En qué consiste el ciberbullying?</h2>
-        <p class="p-muted">Es una forma persistente y sistemática de acoso digital, común entre niños y adolescentes, que busca humillar o excluir a la víctima de su grupo social.</p>
+    <main id="contenido-principal" class="layout" role="main" aria-labelledby="titulo-principal">
+      <article class="article-card" aria-describedby="resumen-bullying">
+        <figure class="hero">
+          <img class="placeholder" src="assets/bulling_1.jpg" alt="Ilustración sobre relaciones y redes sociales" loading="lazy" width="1200" height="675">
+        </figure>
+
+        <h2 id="titulo-principal" class="h2">¿En qué consiste el ciberbullying?</h2>
+        <p id="resumen-bullying" class="p-muted">
+          Es el acoso repetido y sistemático entre iguales usando medios digitales. Suele incluir burlas, exclusión, difusión de memes o contenido dañino que persigue aislar o humillar a la víctima.
+        </p>
 
         <h3 class="h2">Efectos en la víctima</h3>
         <ul class="p-muted">
-          <li>Estrés y ansiedad crónica.</li>
-          <li>Depresión y baja autoestima.</li>
-          <li>Aislamiento social y problemas académicos.</li>
+          <li>Estrés y ansiedad persistente.</li>
+          <li>Depresión y pérdida de autoestima.</li>
+          <li>Aislamiento social y dificultades escolares.</li>
         </ul>
 
         <h3 class="h2">Caso ilustrativo</h3>
-        <div class="callout">Un grupo comparte burlas y memes contra un estudiante; la víctima sufre aislamiento y evita asistir a la escuela, afectando su rendimiento.</div>
+        <div class="callout" role="article">
+          Un grupo comparte memes burlándose de un estudiante; la víctima deja de participar en clases y muestra cambios en su rendimiento y ánimo. Intervención temprana de docentes y apoyo psicológico marcaron la diferencia.
+        </div>
 
-        <h3 class="h2">Prevención</h3>
-        <p class="p-muted">Educación en el uso responsable de la red, comunicación abierta en la familia y protocolos claros en escuelas para detectar y actuar ante casos.</p>
+        <h3 class="h2">Prevención y respuesta</h3>
+        <p class="p-muted">
+          La prevención implica educación digital, reglas claras en la escuela y canales seguros para reportar. Si observas o sufres ciberbullying: documenta, informa a adultos y evita reaccionar solo/a en redes.
+        </p>
       </article>
 
-      <aside class="aside article-card">
-        <h3 style="margin-top:0">Apoyo</h3>
-        <p class="small-muted">Padres y docentes deben tomar denuncias en serio y facilitar ayuda psicológica cuando sea necesaria.</p>
+      <aside class="aside-card" aria-label="recursos y apoyo">
+        <h3 style="margin-top:0">Apoyo y pasos a seguir</h3>
+        <p class="small-muted">Los padres y docentes deben escuchar, validar y actuar: no minimizar. Facilita ayuda profesional si hay señales de depresión o aislamiento.</p>
+
+        <h4 style="margin-top:12px">Recursos</h4>
+        <ul class="small-muted">
+          <li><a class="external" href="https://www.unicef.org" target="_blank" rel="noopener">Recursos para jóvenes y familias (UNICEF)</a></li>
+          <li><a class="external" href="https://www.commonsensemedia.org" target="_blank" rel="noopener">Guía para familias (Common Sense)</a></li>
+        </ul>
+
+        <div style="margin-top:14px">
+          <a href="index.html" class="bigbtn" style="display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
       </aside>
     </main>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:10px 0">I.E. SANTA FORTUNATA</footer>
+    <footer class="site-footer" role="contentinfo">I.E. SANTA FORTUNATA</footer>
   </div>
 </body>
 </html>

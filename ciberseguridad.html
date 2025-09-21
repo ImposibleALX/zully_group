@@ -1,57 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Seguridad de Datos — I.E. SANTA FORTUNATA</title>
+  <meta name="description" content="Consejos prácticos y fáciles para proteger tu información personal y escolar. Seguridad de datos para alumnos y docentes.">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap-article" style="padding:14px">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="logo">🔐</div>
-        <div>
-          <h1 style="margin:0;font-size:18px">Seguridad de Datos</h1>
-          <div class="small-muted">Protección de información para usuarios y empresas.</div>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="wrap" role="document">
+    <header class="site-header" role="banner" aria-label="Encabezado">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🔐</div>
+        <div class="header-title">
+          <h1 class="site-name">Seguridad de Datos</h1>
+          <p class="small-muted">Protege tu información: consejos claros para estudiantes y docentes.</p>
         </div>
       </div>
-      <nav>
-        <a href="index.html" class="bigbtn">Volver al inicio</a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a class="bigbtn" href="index.html" aria-label="Volver al inicio">⬅ Volver al inicio</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:16px;align-items:start">
-      <article class="article-card">
-        <img class="placeholder" src="" alt="Imagen representativa Seguridad de Datos">
-        <h2 class="h2">¿Qué es la seguridad de datos?</h2>
-        <p class="p-muted">Conjunto de prácticas y tecnologías para proteger confidencialidad, integridad y disponibilidad de la información frente a accesos no autorizados y pérdidas.</p>
+    <main id="contenido-principal" class="layout" role="main" aria-labelledby="titulo-principal">
+      <article class="article-card" aria-describedby="resumen-seg">
+        <figure class="hero">
+          <img class="placeholder" src="assets/se_1.jfif" alt="Ilustración: candado y datos digitales" loading="lazy" width="1200" height="675" />
+        </figure>
 
-        <h3 class="h2">Medidas clave</h3>
-        <div class="callout">
-          <ul>
-            <li>Contraseñas robustas y gestores de contraseñas.</li>
-            <li>Autenticación de dos factores (2FA).</li>
-            <li>Encriptación de datos en tránsito y en reposo.</li>
-            <li>Backups regulares y verificados.</li>
-            <li>Actualizaciones y parches periódicos.</li>
-            <li>Formación y conciencia sobre phishing.</li>
+        <h2 id="titulo-principal" class="h2" style="margin-top:14px;">¿Qué es la seguridad de datos?</h2>
+        <p id="resumen-seg" class="p-muted">
+          La seguridad de datos reúne prácticas y herramientas para que tu información —como contraseñas, documentos y mensajes— no caiga en manos equivocadas. No es solo tecnología: son pequeños hábitos diarios que hacen una gran diferencia.
+        </p>
+
+        <h3 class="h2">Medidas clave (fáciles de aplicar)</h3>
+        <div class="callout info" role="note" aria-label="Medidas recomendadas">
+          <ul class="p-muted" style="margin:0;padding-left:18px;">
+            <li><strong>Contraseñas robustas:</strong> usa frases largas o un gestor de contraseñas en vez de repetir la misma.</li>
+            <li><strong>Activa 2FA:</strong> factor adicional como mensaje o app que evita accesos aun si te roban la contraseña.</li>
+            <li><strong>Encriptación:</strong> protege archivos sensibles y usa HTTPS cuando navegues o ingreses datos.</li>
+            <li><strong>Backups:</strong> copia tus archivos importantes en un lugar distinto (disco externo o nube confiable).</li>
+            <li><strong>Actualizaciones:</strong> mantiene sistema y programas al día para cerrar vulnerabilidades.</li>
+            <li><strong>Formación:</strong> aprende a reconocer phishing y avisos sospechosos antes de clicar.</li>
           </ul>
         </div>
 
-        <h3 class="h2">Ejemplos y defensas</h3>
-        <div class="callout">Phishing: correos que imitan servicios legítimos. Defensa: verificar remitente, no clicar enlaces y activar 2FA.</div>
-        <div class="callout alt" style="margin-top:10px">Ransomware: cifrado malicioso de archivos. Defensa: backups fuera de línea y segmentación de red.</div>
+        <h3 class="h2">Casos comunes y defensas</h3>
+        <div class="callout" role="article" aria-label="Ejemplo phishing">
+          <strong>Phishing:</strong> correos o mensajes que imitan servicios reales para que entregues tu contraseña.  
+          Defensa práctica: verificar URL antes de entrar, no descargar adjuntos inesperados y activar 2FA.
+        </div>
+
+        <div class="callout warn" role="alert" aria-label="Ejemplo ransomware" style="margin-top:10px;">
+          <strong>Ransomware:</strong> software que cifra tus archivos y pide rescate.  
+          Defensa práctica: backups offline (no conectados), mantener copias históricas y segmentar accesos en la red.
+        </div>
+
+        <h3 class="h2">Checklist rápido — hazlo hoy</h3>
+        <ol class="p-muted">
+          <li>Activa 2FA en tus cuentas principales (email, plataforma escolar).</li>
+          <li>Cambia contraseñas repetidas por una frase única o usa un gestor.</li>
+          <li>Haz un backup de archivos importantes y pruébalo (restaurar una vez).</li>
+          <li>Actualiza tu sistema y antivirus regularmente.</li>
+          <li>Si recibes un enlace sospechoso, no lo abras: confirma con la persona por otro canal.</li>
+        </ol>
       </article>
 
-      <aside class="aside article-card">
-        <h3 style="margin-top:0">Checklist para usuarios</h3>
-        <p class="small-muted">Usa 2FA, actualiza software, separa cuentas personales y laborales, y realiza backups regulares.</p>
+      <aside class="aside-card" aria-label="recursos y resumen">
+        <h3 style="margin-top:0">Resumen rápido</h3>
+        <p class="small-muted">La seguridad es hábitos: contraseñas buenas, 2FA, backups y atención al correo.</p>
+
+        <h4 style="margin-top:12px">Recursos útiles</h4>
+        <ul class="small-muted">
+          <li><a href="https://haveibeenpwned.com" target="_blank" rel="noopener" style="color:inherit">¿Mi email fue filtrado?</a></li>
+          <li><a href="https://www.cyber.gov.au/acsc/view-all-content/guidance-materials" target="_blank" rel="noopener" style="color:inherit">Guías prácticas (Agencias de ciberseguridad)</a></li>
+        </ul>
+
+        <h4 style="margin-top:12px">Mini-glosario</h4>
+        <dl class="small-muted">
+          <dt><strong>2FA</strong></dt><dd>Mecanismo que añade un segundo paso para entrar a una cuenta (p. ej. código por app).</dd>
+          <dt><strong>Backup</strong></dt><dd>Copia de seguridad de tus archivos que puedes recuperar si hay pérdida o ataque.</dd>
+        </dl>
+
+        <div style="margin-top:14px;">
+          <a href="index.html" class="bigbtn" style="display:block;text-align:center">⬅ Volver al inicio</a>
+        </div>
       </aside>
     </main>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);padding:10px 0">I.E. SANTA FORTUNATA</footer>
+    <footer class="site-footer" role="contentinfo">I.E. SANTA FORTUNATA</footer>
   </div>
 </body>
 </html>
